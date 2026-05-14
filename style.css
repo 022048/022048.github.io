@@ -266,3 +266,56 @@ a {
     padding: 30px 20px;
   }
 }
+.news-ticker {
+  margin: 20px 70px;
+  padding: 12px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  overflow: hidden;
+}
+
+.news-label {
+  font-size: 12px;
+  font-weight: 900;
+  color: #111;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.06);
+  flex-shrink: 0;
+}
+
+.news-track {
+  display: flex;
+  gap: 40px;
+  white-space: nowrap;
+  animation: tickerMove 30s linear infinite;
+}
+
+.news-item {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.news-item:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@keyframes tickerMove {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .news-ticker {
+    margin: 15px 20px;
+  }
+}
